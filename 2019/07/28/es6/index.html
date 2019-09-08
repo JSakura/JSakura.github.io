@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>es6 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="es6新增数组  entries()方法返回一个新Array Iterator对象，该对象包含数组中每个索引的键 / 值对。判断数组中是否每个元素都满足条件 只有都满足条件才返回true；  var arr10 = [1, 2, 3, 4, 5, 6] for (const [index, element] of arr10.entries())    console.log(index, ele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6">
+<meta property="og:url" content="https://jsakura.github.io/2019/07/28/es6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="es6新增数组  entries()方法返回一个新Array Iterator对象，该对象包含数组中每个索引的键 / 值对。判断数组中是否每个元素都满足条件 只有都满足条件才返回true；  var arr10 = [1, 2, 3, 4, 5, 6] for (const [index, element] of arr10.entries())    console.log(index, ele">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-24T09:58:22.667Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="es6">
+<meta name="twitter:description" content="es6新增数组  entries()方法返回一个新Array Iterator对象，该对象包含数组中每个索引的键 / 值对。判断数组中是否每个元素都满足条件 只有都满足条件才返回true；  var arr10 = [1, 2, 3, 4, 5, 6] for (const [index, element] of arr10.entries())    console.log(index, ele">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jsakura.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-es6" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/28/es6/" class="article-date">
+  <time datetime="2019-07-28T09:54:03.000Z" itemprop="datePublished">2019-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      es6
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>es6新增数组</p>
+<ol>
+<li>entries()方法返回一个新Array Iterator对象，该对象包含数组中每个索引的键 / 值对。判断数组中是否每个元素都满足条件 只有都满足条件才返回true；</li>
+</ol>
+<p>var arr10 = [1, 2, 3, 4, 5, 6]</p>
+<p>for (const [index, element] of arr10.entries())<br>    console.log(index, element);</p>
+<ol start="2">
+<li>判断数组中是否每个元素都满足条件 只要有一个满足就返回true 只有都不满足时才返回false；</li>
+</ol>
+<p>arr2.some(function (value, index, array) {<br>    return value % 2 == 0;<br>})</p>
+<ol start="3">
+<li>该every()方法测试数组中的所有元素是否都通过了由提供的函数实现的测试。它返回一个布尔值。</li>
+</ol>
+<p>[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false</p>
+<ol start="4">
+<li>find()方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。</li>
+</ol>
+<p>[1, 2, 5, -1, 9].find((n) =&gt; n &lt; 0)</p>
+<ol start="5">
+<li>findIndex()方法的用法与find()方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回 - 1。</li>
+</ol>
+<p>[1, 2, 5, -1, 9].findIndex((n) =&gt; n &lt; 0)</p>
+<ol start="6">
+<li>filter()方法使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组。filter 为数组中的每个元素调用一次 callback 函数，并利用所有使得 callback 返回 true 或 等价于 true 的值 的元素创建一个新数组。那些没有通过 callback 测试的元素会被跳过，不会被包含在新数组中。filter 不会改变原数组。</li>
+</ol>
+<p>数组去重</p>
+<p>var arr = [1, 2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 0, 8, 6, 3, 4, 56, 2];<br>var arr2 = arr.filter((x, index, self) =&gt; self.indexOf(x) === index)</p>
+<ol start="7">
+<li>forEach()<br>var arr = [1, 2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 0, 8, 6, 3, 4, 56, 2];<br>var newarr = []<br>arr.forEach((x, index, self) =&gt; {<br>if (self.indexOf(x) === index) {<br> newarr.push(x)<br>}<br>})<br>console.log(newarr)</li>
+<li>map() 原数组被“映射”成对应新数组, 返回一个新数组</li>
+</ol>
+<p>var building = [<br>    { name: ‘the Great Wall’, location: ‘BeiJing’ },<br>    { name: ‘Eiffel Tower’, location: ‘Paris ‘ }<br>]<br>var citys = building.map(item =&gt; {<br>    return item.location<br>})<br>console.log(citys)</p>
+<ol start="9">
+<li>reduce 对每个数组中的每项进行累加<br>var numbers = [1, 2, 3, 4, 5];<br>var sumValue = numbers.reduce(function (sum, number2) {  //第一个参数为叠加总值，需要初始化，第二个参数是当前项<br> return sum + number2;<br>}, 0);    //sum的初始化<br>console.log(sumValue);   //15</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jsakura.github.io/2019/07/28/es6/" data-id="ck0amtupc0000giwgm75xy02a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/30/js预解析/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          js预解析
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/26/js数组方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js数组方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/30/js预解析/">js预解析</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/es6/">es6</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/26/js数组方法/">js数组方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/24/js/">node.js</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
