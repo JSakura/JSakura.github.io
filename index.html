@@ -153,10 +153,12 @@
 <li>$ hexo init 初始化本地文件和网站目录</li>
 <li>$ hexo new 新建文章 简化 hexo n </li>
 <li>$ hexo generate 生成静态文件，一般简写hexo g</li>
-<li>$ hexo server 启动服务 <pre><code>-p 指定端口 默认4000
--i 指定域名 
--s 静态资源模式 
-</code></pre></li>
+<li>$ hexo server 启动服务<ol>
+<li>$ hexo server -p 指定端口 默认4000</li>
+<li>$ hexo server -i 指定域名 </li>
+<li>$ hexo server -s 静态资源模式 </li>
+</ol>
+</li>
 <li>$ hexo deploy 部署网站 简化 hexo d</li>
 <li>$ hexo clean 清楚缓存文件</li>
 </ol>
@@ -235,7 +237,21 @@
       
         <p>node+monegodb</p>
 <p>Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具</p>
-
+<p>MongoDB基本操作命令</p>
+<pre><code>1.show dbs            查看所有的数据库
+2.show collections    显示当情的数据库中的集合
+3.show users          查看当前数据用户信息
+4.use &lt;db name&gt;       切换数据库
+5.db.getName()        查看当前数据库
+6.db.dropDatabase()   删除当前数据库
+7.db.cloneDatabase(“机器ip”)  将指定机器上的数据库的数据克隆到当前数据库
+8.db.repairDatabase() 修复当前数据库
+</code></pre><p>MongoDB常用操作命令</p>
+<pre><code>1.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:&apos;字段值&apos;})                           在集合中查询对应的字段名的字段值的数据
+2.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:{$exists:false}}).count()           在集合中查找没有该字段名的数据的数量
+3.db.getCollection(&apos;集合名&apos;).find({&apos;字段对象.对象下的名&apos;:&apos;字段值&apos;})                在和集中查找字段对象下的属性的值的数据
+4.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:{&apos;$gt&apos;：数值}})                      在集合中查找大于数值的数据 $gt 大于 $lt 小于 $gte 大等于 $lte 小等于  $ne 不等于
+</code></pre>
       
 
       
