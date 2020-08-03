@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://jsakura.github.io">
-  <title>Archives: 2019/7 | JSakura</title>
+  <title>js | JSakura</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JSakura">
-<meta property="og:url" content="https://jsakura.github.io/archives/2019/07/index.html">
+  <meta name="description" content="JS的解析过程分为两个阶段：预编译期与执行期。预编译期：找程序中var关键字，如果找到了提前给var定义的变量赋值undefined 找程序中的普通函数，如果找到了，函数提升，将整个函数赋值给函数名。 如果找的var的名字和函数名字相同，函数优先。 执行期: 逐行解析代码。按照上下顺序。如果碰到函数定义，忽略。重点：函数内部同样适用于js预解析。 常见到的是变量提升    console.log(">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js">
+<meta property="og:url" content="https://jsakura.github.io/2019/07/30/js/index.html">
 <meta property="og:site_name" content="JSakura">
+<meta property="og:description" content="JS的解析过程分为两个阶段：预编译期与执行期。预编译期：找程序中var关键字，如果找到了提前给var定义的变量赋值undefined 找程序中的普通函数，如果找到了，函数提升，将整个函数赋值给函数名。 如果找的var的名字和函数名字相同，函数优先。 执行期: 逐行解析代码。按照上下顺序。如果碰到函数定义，忽略。重点：函数内部同样适用于js预解析。 常见到的是变量提升    console.log(">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-08-03T08:08:58.897Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSakura">
+<meta name="twitter:title" content="js">
+<meta name="twitter:description" content="JS的解析过程分为两个阶段：预编译期与执行期。预编译期：找程序中var关键字，如果找到了提前给var定义的变量赋值undefined 找程序中的普通函数，如果找到了，函数提升，将整个函数赋值给函数名。 如果找的var的名字和函数名字相同，函数优先。 执行期: 逐行解析代码。按照上下顺序。如果碰到函数定义，忽略。重点：函数内部同样适用于js预解析。 常见到的是变量提升    console.log(">
   
     <link rel="alternative" href="/atom.xml" title="JSakura" type="application/atom+xml">
   
@@ -124,36 +129,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-js" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      js
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/30/js/" class="archive-article-date">
+
+        
+        <a href="/2019/07/30/js/" class="archive-article-date">
   	<time datetime="2019-07-30T10:01:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/30/js/">js</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JS的解析过程分为两个阶段：预编译期与执行期。"><a href="#JS的解析过程分为两个阶段：预编译期与执行期。" class="headerlink" title="JS的解析过程分为两个阶段：预编译期与执行期。"></a>JS的解析过程分为两个阶段：预编译期与执行期。</h2><p>预编译期：找程序中var关键字，如果找到了提前给var定义的变量赋值undefined 找程序中的普通函数，如果找到了，函数提升，将整个函数赋值给函数名。 如果找的var的名字和函数名字相同，函数优先。</p>
+<p>执行期: 逐行解析代码。按照上下顺序。如果碰到函数定义，忽略。<br>重点：函数内部同样适用于js预解析。</p>
+<p>常见到的是变量提升<br>    console.log(a)<br>    1.var a = 1<br>    2.function a(){}<br>    满足1时候 console undefined  1，2都存在情况下  console function a()</p>
+<h2 id="JS的深拷贝和浅拷贝"><a href="#JS的深拷贝和浅拷贝" class="headerlink" title="JS的深拷贝和浅拷贝"></a>JS的深拷贝和浅拷贝</h2><p>浅拷贝：B复制了A，当修改A时，如果B也跟着变，说明这是浅拷贝 复制的是引用地址 而不是堆里面的值<br>深拷贝：B复制了A，当修改A时，如果B没有改变，说明这是深拷贝 深拷贝本身只针对较为复杂的object类型数据。</p>
+<pre><code>1.递归进行深拷贝
+function deepClone(obj){
+    let objClone = Array.isArray(obj)?[]:{};
+    if(obj &amp;&amp; typeof obj===&quot;object&quot;){
+        for(key in obj){
+            if(obj.hasOwnProperty(key)){
+                if(obj[key]&amp;&amp;typeof obj[key] ===&quot;object&quot;){
+                    objClone[key] = deepClone(obj[key]);
+                }else{
+                    objClone[key] = obj[key];
+                }
+            }
+        }
+    }
+    return objClone;
+}  
 
-        <div class="article-info info-on-right">
-          
+2.用JSON对象的parse和stringify
+function deepClone(obj){
+    let newobj = JSON.stringify(obj),
+    objClone = JSON.parse(newobj);
+    return objClone
+}  
+
+3.JQ的extend
+$.extend( [deep], target, object1 [, objectN ] )
+    deep表示是否深拷贝，true ==&gt; 深拷贝，false ==&gt; 浅拷贝
+    target Object类型 目标对象，其他对象的成员属性将被附加到该对象上。
+    object1，objectN可选。 Object类型 第一个以及第N个被合并的对象。
+
+
+扩展运算符 map，filter 等返回新数组是进行了部分深拷贝 只是对第一层进行了深拷贝
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -165,133 +204,64 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/28/es6/" class="archive-article-date">
-  	<time datetime="2019-07-28T09:54:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/06/29/mongoose/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mongoose
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/28/es6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">es6</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/28/es6/">es6</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/js数组方法/" class="archive-article-date">
-  	<time datetime="2019-07-26T09:48:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/js数组方法/">js数组方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/24/nodejs/" class="archive-article-date">
-  	<time datetime="2019-07-24T09:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/24/nodejs/">node.js</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -314,8 +284,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
