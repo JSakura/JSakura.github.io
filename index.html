@@ -236,21 +236,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>node+monegodb</p>
-<p>Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具</p>
-<p>MongoDB基本操作命令</p>
-<pre><code>1.show dbs            查看所有的数据库
+<p>Mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具<br>    数据库 database  集合 collection  文档 document<br>MongoDB基本操作命令</p>
+<pre><code>1.show dbs(databases) 查看所有的数据库 
 2.show collections    显示当情的数据库中的集合
 3.show users          查看当前数据用户信息
-4.use &lt;db name&gt;       切换数据库
+4.use &lt;db name&gt;       切换数据库 如果没有该数据库不会报错 后期当该数据库有数据时 系统会自己进行创建
 5.db.getName()        查看当前数据库
 6.db.dropDatabase()   删除当前数据库
 7.db.cloneDatabase(“机器ip”)  将指定机器上的数据库的数据克隆到当前数据库
 8.db.repairDatabase() 修复当前数据库
+9.db.createCollection()  创建集合
+10.db.集合名.drop()    删除集合
 </code></pre><p>MongoDB常用操作命令</p>
 <pre><code>1.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:&apos;字段值&apos;})                           在集合中查询对应的字段名的字段值的数据
 2.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:{$exists:false}}).count()           在集合中查找没有该字段名的数据的数量
 3.db.getCollection(&apos;集合名&apos;).find({&apos;字段对象.对象下的名&apos;:&apos;字段值&apos;})                在和集中查找字段对象下的属性的值的数据
 4.db.getCollection(&apos;集合名&apos;).find({&apos;字段名&apos;:{&apos;$gt&apos;：数值}})                      在集合中查找大于数值的数据 $gt 大于 $lt 小于 $gte 大等于 $lte 小等于  $ne 不等于
+</code></pre><p>MongoDB增删改查</p>
+<pre><code>1.db.集合名.insetrt(json 数据)  在集合中增加数据 集合存在直接插入数据 没有进行创建然后增加数据
 </code></pre>
       
 
